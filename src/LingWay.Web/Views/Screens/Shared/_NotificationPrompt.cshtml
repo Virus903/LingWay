@@ -1,0 +1,14 @@
+@* Разметка: learning.js: offerNotifications. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._NotificationPrompt.1">
+<p>Напоминать о следующих занятиях?</p>
+<button
+  class="btn"
+  onclick="
+    requestLearningNotifications();
+    this.parentElement.remove();
+  "
+>
+  Разрешить
+</button>
+<button class="btn secondary" onclick="this.parentElement.remove()">Позже</button>
+</script>

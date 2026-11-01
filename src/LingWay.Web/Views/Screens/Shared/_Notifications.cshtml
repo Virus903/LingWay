@@ -1,0 +1,51 @@
+@* Разметка: account.js: notificationCenter. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Notifications.1">
+<a class="notification-item {{state}}" href="{{n_href_0}}" onclick="readSiteNotification('{{id}}')">
+  {{value_1}}
+  <span>
+    <b>{{n_title_2}}</b>
+    <small>{{n_text_3}}</small>
+  </span>
+</a>
+</script>
+
+@* Разметка: account.js: notificationCenter. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Notifications.2">
+<div class="notification-empty">
+  {{value_0}}
+  <b>{{value_1}}</b>
+  <small>{{value_2}}</small>
+</div>
+</script>
+
+@* Разметка: account.js: notificationCenter. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Notifications.3">
+<span class="notification-badge">{{value_0}}</span>
+</script>
+
+@* Разметка: account.js: notificationCenter. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Notifications.4">
+<span>{{items_length_0}}</span>
+</script>
+
+@* Разметка: account.js: notificationCenter. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Notifications.5">
+<div class="notification-center">
+  <button
+    class="notification-button"
+    type="button"
+    aria-label="{{value_0}}"
+    aria-expanded="false"
+    onclick="toggleNotifications(event)"
+  >
+    {{value_1}}{{value_2}}
+  </button>
+  <section class="notification-panel" hidden>
+    <div class="notification-title">
+      <b>{{value_3}}</b>
+      {{value_4}}
+    </div>
+    <div class="notification-list">{{list_5}}</div>
+  </section>
+</div>
+</script>

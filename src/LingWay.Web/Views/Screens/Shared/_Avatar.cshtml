@@ -1,0 +1,30 @@
+@* Разметка: account.js: avatarMarkup. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Avatar.1">
+<img src="{{p_avatar_0}}" alt="" />
+</script>
+
+@* Разметка: account.js: avatarMarkup. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Avatar.2">
+<div class="avatar-controls">
+  <label class="btn secondary avatar-upload">
+    {{value_0}}
+    <input
+      type="file"
+      name="avatar_file"
+      accept="image/png,image/jpeg,image/webp"
+      onchange="previewProfileAvatar(this)"
+    />
+  </label>
+  <button class="text-button" type="button" onclick="removeProfileAvatar(this)">{{value_1}}</button>
+  <input type="hidden" name="remove_avatar" value="0" />
+  <small>{{value_2}}</small>
+</div>
+</script>
+
+@* Разметка: account.js: avatarMarkup. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Shared._Avatar.3">
+<div class="avatar-editor">
+  <div class="profile-avatar" id="avatar-preview">{{picture_0}}</div>
+  {{value_1}}
+</div>
+</script>
