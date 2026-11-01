@@ -1,0 +1,33 @@
+**/bin/
+**/obj/
+.vs/
+**/App_Data/
+**/TestResults/
+**/playwright-report/
+**/appsettings.Local.json
+**/LOCAL_ACCOUNTS.txt
+**/mailbox.txt
+**/secrets.json
+**/*.bak
+**/node_modules/
+**/*.user
+**/*.suo
+**/*.pubxml
+**/*.pubxml.user
+**/*.pfx
+**/*.p12
+**/*.pem
+**/*.key
+**/*.sqlite*
+**/*.mdf
+**/*.ldf
+**/*.log
+.env
+.env.*
+!.env.example
+tests/artifacts/
+tests/accounts.local.txt
+/бд с пользователями/
+# Local reports and diagnostic output are not source files.
+/reports/
+/screenshots/
