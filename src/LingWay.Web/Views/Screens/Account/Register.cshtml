@@ -1,0 +1,23 @@
+@* Разметка: functional.js: register. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Register.1">
+<form
+  class="form-box card"
+  onsubmit="
+    event.preventDefault();
+    registerSubmit(this);
+  "
+>
+  <h2>Начните своё путешествие</h2>
+  <div class="name-grid">{{value_0}}{{value_1}}</div>
+  {{value_2}}{{value_3}}{{value_4}}{{value_5}}
+  <label class="check">
+    <input type="checkbox" required />
+    Принимаю
+    <a href="#terms">условия использования</a>
+    и
+    <a href="#privacy">политику конфиденциальности</a>
+  </label>
+  <button class="btn full" style="margin-top: 20px">Зарегистрироваться</button>
+  <p><a href="#login">Уже есть аккаунт? Войти</a></p>
+</form>
+</script>

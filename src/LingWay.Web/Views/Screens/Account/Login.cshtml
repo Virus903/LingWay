@@ -1,0 +1,28 @@
+@* Разметка: functional.js: login. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Login.1">
+<div class="auth-wrap single-auth">
+  <section class="auth-form">
+    <form
+      class="form-box"
+      onsubmit="
+        event.preventDefault();
+        loginSubmit(this);
+      "
+    >
+      <h2>Вход в аккаунт</h2>
+      {{value_0}}{{value_1}}
+      <button class="btn full">Войти</button>
+      <div class="actions">
+        <a href="#reset">Забыли пароль?</a>
+        <a href="#register">Регистрация</a>
+      </div>
+    </form>
+  </section>
+</div>
+</script>
+
+@* Разметка: learning.js: login. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Login.2">
+<div class="learning-section">{{value_0}}</div>
+</form>
+</script>

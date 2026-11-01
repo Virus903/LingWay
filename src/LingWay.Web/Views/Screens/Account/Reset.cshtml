@@ -1,0 +1,16 @@
+@* Разметка: functional.js: reset. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Reset.1">
+<form
+  class="form-box card"
+  onsubmit="
+    event.preventDefault();
+    resetSubmit(this);
+  "
+>
+  <h2>Новый пароль</h2>
+  {{value_0}}{{value_1}}
+  <p class="muted">Введите код из письма. Он действует 15 минут. Проверьте также папку «Спам».</p>
+  {{value_2}}{{value_3}}
+  <button class="btn full">Сохранить пароль</button>
+</form>
+</script>
