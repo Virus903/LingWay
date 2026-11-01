@@ -1,0 +1,21 @@
+@* Разметка: functional.js: goal. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Onboarding.Goal.1">
+<label class="option-card">
+  <input type="radio" name="goal" value="{{v_0}}" {{value_1}} />
+  <b>{{v_2}}</b>
+</label>
+</script>
+
+@* Разметка: functional.js: goal. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Onboarding.Goal.2">
+<form
+  class="legal"
+  onsubmit="
+    event.preventDefault();
+    saveOnboarding(this, 'trip-date');
+  "
+>
+  {{value_0}}{{value_1}}
+  <button class="btn">Продолжить</button>
+</form>
+</script>

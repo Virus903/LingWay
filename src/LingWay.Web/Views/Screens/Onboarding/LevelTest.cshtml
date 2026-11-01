@@ -1,0 +1,26 @@
+@* Разметка: functional.js: levelTest. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Onboarding.LevelTest.1">
+<label class="option-card">
+  <input type="radio" name="answer" value="{{i_0}}" required />
+  {{v_1}}
+</label>
+</script>
+
+@* Разметка: functional.js: levelTest. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Onboarding.LevelTest.2">
+<section class="exercise">
+  {{value_0}}{{value_1}}
+  <form
+    class="card"
+    style="margin-top: 24px"
+    onsubmit="
+      event.preventDefault();
+      placementAnswer(this);
+    "
+  >
+    <h2>{{value_2}}</h2>
+    {{value_3}}
+    <button class="btn">Ответить</button>
+  </form>
+</section>
+</script>
