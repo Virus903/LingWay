@@ -1,0 +1,111 @@
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.1">
+<a class="tab {{value_0}}" href="#reports{{value_1}}">{{label_2}}</a>
+</script>
+
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.2">
+<div class="tabs">{{value_0}}</div>
+</script>
+
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.3">
+<option {{value_0}}>{{v_1}}</option>
+</script>
+
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.4">
+<select aria-label="Роль {{u_name_0}}" onchange="changeRole({{u_id_1}},this.value)">
+  {{value_2}}
+</select>
+</script>
+
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.5">
+<option value="{{g_id_0}}">{{g_name_1}}</option>
+</script>
+
+@* Разметка: functional.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.6">
+<section class="card">
+  <h2>Учебные результаты</h2>
+  <label>
+    Группа
+    <select id="report-group">
+      <option value="">Все доступные группы</option>
+      {{value_0}}
+    </select>
+  </label>
+  <div class="actions">{{value_1}}{{value_2}}</div>
+</section>
+</script>
+
+@* Разметка: learning.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.7">
+<option value="{{id_0}}" {{value_1}}>{{title_2}}</option>
+</script>
+
+@* Разметка: learning.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.8">
+<label>
+  {{label_0}}
+  <select onchange="learningState.report.{{key_1}}=this.value;render()">
+    <option value="">Все</option>
+    {{value_2}}
+  </select>
+</label>
+</script>
+
+@* Разметка: learning.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.9">
+<div class="tabs">
+  <a class="tab active" href="#reports">Отчёты</a>
+  <a class="tab" href="#reports?tab=audit">Журнал</a>
+  <a class="tab" href="#reports?tab=users">Пользователи и роли</a>
+</div>
+</script>
+
+@* Разметка: learning.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.10">
+<label>
+  {{label_0}}
+  <input
+    class="input"
+    type="date"
+    value="{{value_1}}"
+    onchange="learningState.report.{{k_2}}=this.value;render()"
+  />
+</label>
+</script>
+
+@* Разметка: learning.js: reportsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Reports.11">
+{{value_0}}{{value_1}}
+<section class="learning-card learning-section">
+  <div class="learning-filters">{{value_2}}{{value_3}}{{value_4}}{{value_5}}{{value_6}}</div>
+  <div class="actions">{{value_7}}{{value_8}}{{value_9}}</div>
+</section>
+<div class="learning-stats">
+  <div>
+    <b>{{records_length_10}}</b>
+    <small>Попыток</small>
+  </div>
+  <div>
+    <b>{{value_11}}%</b>
+    <small>Средняя точность</small>
+  </div>
+  <div>
+    <b>{{value_12}}</b>
+    <small>Учеников</small>
+  </div>
+  <div>
+    <b>{{hard_size_13}}</b>
+    <small>Трудных фраз</small>
+  </div>
+</div>
+<section class="learning-card">
+  <h2>Что разобрать с группой</h2>
+  <div class="learning-table">{{value_14}}</div>
+</section>
+<section class="learning-section learning-table">{{value_15}}</section>
+</script>

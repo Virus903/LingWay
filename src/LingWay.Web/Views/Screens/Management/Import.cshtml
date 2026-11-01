@@ -1,0 +1,57 @@
+@* Разметка: functional.js: importScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Import.1">
+<form
+  class="card"
+  onsubmit="
+    event.preventDefault();
+    savePhrase(this);
+  "
+>
+  {{value_0}}{{value_1}}{{value_2}}
+  <button class="btn">Добавить фразу</button>
+</form>
+{{value_3}}
+</script>
+
+@* Разметка: functional.js: importScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Import.2">
+<form
+  class="card"
+  style="margin-top: 20px"
+  onsubmit="
+    event.preventDefault();
+    performImport(this);
+  "
+>
+  <h2>2. Сопоставьте поля</h2>
+  {{value_0}}
+  <h3>Предпросмотр первых 10 строк</h3>
+  {{value_1}}
+  <p>Всего строк: {{ui_importdata_rows_length_2}}. Неполные строки и дубликаты не импортируются.</p>
+  <button class="btn">Импортировать проверенные строки</button>
+</form>
+</script>
+
+@* Разметка: functional.js: importScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Import.3">
+<div class="card">
+  <h2>Добавлено: {{ui_importresult_added_0}}</h2>
+  {{value_1}}
+</div>
+</script>
+
+@* Разметка: functional.js: importScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Import.4">
+<section class="card">
+  <h2>1. Выберите файл</h2>
+  <p>Первая строка должна содержать названия столбцов. CSV — в кодировке UTF-8.</p>
+  <input
+    type="file"
+    accept=".csv,.xlsx"
+    aria-label="Таблица для импорта"
+    onchange="readImport(this)"
+  />
+  <p>{{value_0}}</p>
+</section>
+{{value_1}}{{value_2}}
+</script>

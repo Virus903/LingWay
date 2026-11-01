@@ -1,0 +1,20 @@
+@* Разметка: functional.js: groupsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Groups.1">
+<code>{{g_code_0}}</code>
+</script>
+
+@* Разметка: functional.js: groupsScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Groups.2">
+{{value_0}}
+<form
+  class="card inline-form"
+  onsubmit="
+    event.preventDefault();
+    createGroup(this);
+  "
+>
+  {{value_1}}
+  <button class="btn">Создать группу</button>
+</form>
+{{value_2}}
+</script>

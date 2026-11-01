@@ -1,0 +1,443 @@
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.1">
+<option value="{{m_id_0}}" {{value_1}}>{{m_title_2}}</option>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.2">
+<option {{value_0}}>{{v_1}}</option>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.3">
+<div class="card">
+  <div class="field">
+    <label for="edit-title">Название</label>
+    <input
+      class="input"
+      id="edit-title"
+      value="{{l_title_0}}"
+      oninput="updateEditor('title', this.value)"
+    />
+  </div>
+  <div class="field">
+    <label for="edit-desc">Описание</label>
+    <textarea id="edit-desc" rows="4" oninput="updateEditor('description', this.value)">
+{{l_description_1}}</textarea>
+  </div>
+  <div class="field">
+    <label>
+      Модуль
+      <select onchange="updateEditor('module_id', Number(this.value))">
+        {{value_2}}
+      </select>
+    </label>
+  </div>
+  <div class="field">
+    <label>
+      Уровень
+      <select onchange="updateEditor('level', this.value)">
+        {{value_3}}
+      </select>
+    </label>
+  </div>
+  <label>
+    <input type="checkbox" {{value_4}} onchange="updateEditor('published', this.checked)" />
+    Опубликовать после сохранения
+  </label>
+</div>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.4">
+<option value="{{v_0}}" {{value_1}}>{{t_2}}</option>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.5">
+<label>
+  Текст озвучки
+  <input class="input" value="{{value_0}}" oninput="changeStep({{i_1}},'audio',this.value)" />
+</label>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.6">
+<label>
+  Варианты (каждый с новой строки)
+  <textarea
+    rows="4"
+    oninput="changeStep({{i_0}},'options',this.value.split(String.fromCharCode(10)))"
+  >
+{{value_1}}</textarea>
+</label>
+<label>
+  Номер правильного ответа (с 1)
+  <input
+    class="input"
+    type="number"
+    min="1"
+    max="8"
+    value="{{value_2}}"
+    oninput="changeStep({{i_3}},'answer',Number(this.value)-1)"
+  />
+</label>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.7">
+<label>
+  Допустимые ответы (каждый с новой строки)
+  <textarea
+    rows="3"
+    oninput="changeStep({{i_0}},'accepted',this.value.split(String.fromCharCode(10)))"
+  >
+{{value_1}}</textarea>
+</label>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.8">
+<article class="card" style="margin: 16px 0">
+  <div class="content-top">
+    <h3>Шаг {{value_0}}</h3>
+    <div class="actions">{{value_1}}{{value_2}}{{value_3}}</div>
+  </div>
+  <label>
+    Тип
+    <select onchange="changeStepType({{i_4}},this.value)">
+      {{value_5}}
+    </select>
+  </label>
+  <label>
+    Вопрос
+    <textarea rows="2" oninput="changeStep({{i_6}},'prompt',this.value)">{{s_prompt_7}}</textarea>
+  </label>
+  {{value_8}}{{value_9}}
+  <label>
+    Подсказка
+    <input class="input" value="{{value_10}}" oninput="changeStep({{i_11}},'hint',this.value)" />
+  </label>
+</article>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.9">
+<p>{{value_0}} {{v_1}}</p>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.10">
+<p>Допустимые ответы: {{value_0}}</p>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.11">
+<article class="preview-step">
+  <span class="pill">{{value_0}} · {{s_type_1}}</span>
+  <h3>{{s_prompt_2}}</h3>
+  {{value_3}}
+</article>
+</script>
+
+@* Разметка: functional.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.12">
+<div class="card">
+  <h2>{{l_title_0}}</h2>
+  <p>{{l_description_1}}</p>
+  {{value_2}}
+</div>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.13">
+<option value="{{m_id_0}}" {{value_1}}>{{m_title_2}}</option>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.14">
+<option {{value_0}}>{{k_1}}</option>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.15">
+<article class="learning-card">
+  <label>
+    Название
+    <input class="input" value="{{l_title_0}}" oninput="updateEditor('title', this.value)" />
+  </label>
+  <label>
+    Цель урока
+    <textarea oninput="updateEditor('description', this.value)">{{l_description_1}}</textarea>
+  </label>
+  <div class="learning-editor-grid">
+    <label>
+      Модуль
+      <select onchange="updateEditor('module_id', Number(this.value))">
+        {{value_2}}
+      </select>
+    </label>
+    <label>
+      Уровень
+      <select onchange="updateEditor('level', this.value)">
+        {{value_3}}
+      </select>
+    </label>
+  </div>
+  <label class="check">
+    <input type="checkbox" {{value_4}} onchange="updateEditor('published', this.checked)" />
+    Опубликован
+  </label>
+</article>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.16">
+<option value="{{k_0}}" {{value_1}}>{{label_2}}</option>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.17">
+<label>
+  Варианты — по одному в строке
+  <textarea oninput="changeStep({{i_0}},'options',this.value.split(String.fromCharCode(10)))">
+{{value_1}}</textarea>
+</label>
+<label>
+  Правильный вариант (номер с 1)
+  <input
+    class="input"
+    type="number"
+    min="1"
+    max="8"
+    value="{{value_2}}"
+    oninput="changeStep({{i_3}},'answer',Number(this.value)-1)"
+  />
+</label>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.18">
+<label>
+  Допустимые ответы — по одному в строке
+  <textarea oninput="changeStep({{i_0}},'accepted',this.value.split(String.fromCharCode(10)))">
+{{value_1}}</textarea>
+</label>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.19">
+<details>
+  <summary>Маршрут диалога</summary>
+  <p class="learning-sub">
+    Ответ | номер следующего шага. Номер {{value_0}} завершает урок. Переходы только вперёд.
+  </p>
+  <textarea oninput="editDialogueRoutes({{i_1}},this.value)">{{value_2}}</textarea>
+  <label>
+    Следующий шаг по умолчанию
+    <input
+      class="input"
+      type="number"
+      min="{{value_3}}"
+      max="{{value_4}}"
+      value="{{value_5}}"
+      onchange="changeStep({{i_6}},'next',Number(this.value)-1)"
+    />
+  </label>
+</details>
+<details>
+  <summary>Вариант реплики по предыдущему ответу</summary>
+  <p class="learning-sub">Каждая строка: предыдущий ответ | новая реплика персонажа</p>
+  <textarea oninput="editBranches({{i_7}},this.value)">{{value_8}}</textarea>
+</details>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.20">
+<small>Изображение загружено</small>
+{{value_0}}
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.21">
+<small>Аудиозапись загружена</small>
+{{value_0}}
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.22">
+<article class="learning-card learning-editor-step">
+  <div class="content-top">
+    <h3>Шаг {{value_0}}</h3>
+    <div class="actions">{{value_1}}{{value_2}}{{value_3}}</div>
+  </div>
+  <label>
+    Тип
+    <select onchange="changeStepType({{i_4}},this.value)">
+      {{value_5}}
+    </select>
+  </label>
+  <label>
+    Вопрос / реплика
+    <textarea oninput="changeStep({{i_6}},'prompt',this.value)">{{s_prompt_7}}</textarea>
+  </label>
+  <div class="learning-editor-grid">
+    <label>
+      Перевод
+      <input
+        class="input"
+        value="{{value_8}}"
+        oninput="changeStep({{i_9}},'translation',this.value)"
+      />
+    </label>
+    <label>
+      Транскрипция
+      <input class="input" value="{{value_10}}" oninput="changeStep({{i_11}},'ipa',this.value)" />
+    </label>
+  </div>
+  {{value_12}}
+  <label>
+    Текст озвучки
+    <input class="input" value="{{value_13}}" oninput="changeStep({{i_14}},'audio',this.value)" />
+  </label>
+  <label>
+    Подсказки: перевод, начало, образец (три строки)
+    <textarea oninput="changeStep({{i_15}},'hints',this.value.split(String.fromCharCode(10)))">
+{{value_16}}</textarea>
+  </label>
+  {{value_17}}
+  <label>Обязательные ключевые слова для «почти верно» (через запятую)
+    <input class="input" value="{{keywords}}" oninput="changeStep({{i_18}},'keywords',this.value.split(',').map(x=>x.trim()).filter(Boolean))" />
+  </label>
+  <div class="learning-editor-grid learning-section">
+    <label class="learning-file">
+      Иллюстрация · PNG, JPEG, WebP
+      <input
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        onchange="loadStepMedia({{i_18}},'image',this)"
+      />
+        {{value_19}}
+        <button class="btn secondary" type="button" onclick="chooseLibraryMedia({{i_18}},'image')">Выбрать из медиатеки</button>
+    </label>
+    <label class="learning-file">
+      Озвучка · MP3, WAV, OGG
+      <input
+        type="file"
+        accept="audio/mpeg,audio/wav,audio/ogg"
+        onchange="loadStepMedia({{i_20}},'audio_file',this)"
+      />
+        {{value_21}}
+        <button class="btn secondary" type="button" onclick="chooseLibraryMedia({{i_20}},'audio_file')">Выбрать из медиатеки</button>
+    </label>
+  </div>
+</article>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.23">
+<div class="learning-editor-grid learning-section">
+  <label>
+    Слово
+    <input
+      class="input"
+      value="{{w_en_0}}"
+      oninput="ui.editor.meta.vocabulary[{{i_1}}].en=this.value"
+    />
+  </label>
+  <label>
+    Перевод
+    <input
+      class="input"
+      value="{{w_ru_2}}"
+      oninput="ui.editor.meta.vocabulary[{{i_3}}].ru=this.value"
+    />
+  </label>
+  <label>
+    Транскрипция
+    <input
+      class="input"
+      value="{{value_4}}"
+      oninput="ui.editor.meta.vocabulary[{{i_5}}].ipa=this.value"
+    />
+  </label>
+  {{value_6}}
+</div>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.24">
+<article class="learning-card">
+  <h2>Слова урока</h2>
+  <p class="learning-sub">После завершения урока эти слова попадут в личный словарь ученика.</p>
+  {{value_0}}{{value_1}}
+</article>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.25">
+<article class="learning-card">
+  <h2>Критерии оценки</h2>
+  <div class="learning-editor-grid">
+    <label>
+      Проходной балл, %
+      <input
+        class="input"
+        type="number"
+        min="50"
+        max="100"
+        value="{{l_meta_criteria_pass_score_0}}"
+        oninput="ui.editor.meta.criteria.pass_score = Number(this.value)"
+      />
+    </label>
+    <label>
+      Порог «почти верно», от 0.5 до 0.99
+      <input
+        class="input"
+        type="number"
+        min="0.5"
+        max="0.99"
+        step="0.01"
+        value="{{l_meta_criteria_near_threshold_1}}"
+        oninput="ui.editor.meta.criteria.near_threshold = Number(this.value)"
+      />
+    </label>
+  </div>
+  <p>
+    Точный ответ — 1 балл, почти верный — 0.5. Карточки слов не влияют на оценку. Три звезды: от 90%
+    без подсказок и повторных попыток, но не ниже проходного балла; две: от проходного балла; одна: от 50%.
+    Максимум три попытки на задание. Ответ со второй или третьей попытки приносит половину баллов.
+    Отрицания и числа должны совпадать. Подсказки: перевод → начало ответа → полный образец.
+  </p>
+  <p class="learning-sub">
+    Сопоставляется распознанный текст. Это не акустическая оценка произношения.
+  </p>
+</article>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.26">
+<article class="learning-card">
+  <span class="pill">{{value_0}} · {{value_1}}</span>
+  {{value_2}}
+  <h3>{{s_prompt_3}}</h3>
+  <p>{{value_4}}</p>
+  <p class="learning-sub">{{value_5}}</p>
+</article>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.27">
+<div class="learning-grid">{{value_0}}</div>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.28">
+<div class="learning-table">{{value_0}}</div>
+</script>
+
+@* Разметка: learning.js: editorScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Editor.29">
+{{value_0}}{{value_1}}
+<section class="learning-section">{{body_2}}</section>
+</script>

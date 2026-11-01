@@ -1,0 +1,25 @@
+<script type="text/x-lingway-template" id="Management.MediaLibrary">
+  <dialog class="edit-dialog" id="media-library-dialog">
+    <h2>Медиатека</h2>
+    <p>Выберите сохранённый файл. Он будет включён в версию урока и офлайн-пакет.</p>
+    <label>Поиск по названию <input type="search" id="media-search" /></label>
+    <div id="media-items" style="max-height:50vh;overflow:auto"></div>
+    <form method="dialog"><button class="btn secondary">Закрыть</button></form>
+  </dialog>
+</script>
+<script type="text/x-lingway-template" id="Management.QualityReport">
+  <section class="learning-card" style="margin:20px 0">
+    <h2>Проверка контента и длительности</h2>
+    <p>Активное время измеряется во время прохождения. Тестовые попытки могут искажать статистику; подтвердить 10–15 минут должен пилот с учениками.</p>
+    <button class="btn secondary" type="button" onclick="loadQualityReport()">Проверить уроки</button>
+    <div id="quality-results" style="overflow:auto" aria-live="polite"></div>
+  </section>
+</script>
+<script type="text/x-lingway-template" id="Learning.TripPlan">
+  <section class="learning-card" style="margin:20px 0" aria-label="План подготовки">
+    <h2>План подготовки к поездке</h2>
+    <p>{{summary}}</p>
+    <p>{{capacity}}</p>
+    <p class="learning-muted">{{note}}</p>
+  </section>
+</script>

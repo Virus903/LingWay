@@ -1,0 +1,43 @@
+@* Разметка: learning.js: importWizard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management._ImportWizard.1">
+<form
+  onsubmit="
+    event.preventDefault();
+    checkLearningImport(this);
+  "
+>
+  <h3>Сопоставление столбцов</h3>
+  {{value_0}}
+  <button class="btn">Проверить строки</button>
+</form>
+<div class="learning-table">{{value_1}}</div>
+</script>
+
+@* Разметка: learning.js: importWizard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management._ImportWizard.2">
+<div class="learning-table">{{value_0}}</div>
+</script>
+
+@* Разметка: learning.js: importWizard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management._ImportWizard.3">
+<div class="learning-feedback">
+  <b>Готово к импорту: {{checked_valid_0}} · ошибок: {{checked_errors_length_1}}</b>
+  <p>Будут добавлены только проверенные строки. Остальные можно исправить в исходной таблице.</p>
+</div>
+{{value_2}}{{value_3}}
+</script>
+
+@* Разметка: learning.js: importWizard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management._ImportWizard.4">
+<section class="learning-card learning-section">
+  <h2>{{value_0}}</h2>
+  <p class="learning-sub">CSV или XLSX, до 2000 строк и 5 МБ.{{value_1}}</p>
+  <input
+    type="file"
+    accept=".csv,.xlsx"
+    aria-label="Таблица импорта"
+    onchange="readLearningImport(this,'{{kind_2}}',{{groupid_3}})"
+  />
+  {{value_4}}{{value_5}}
+</section>
+</script>

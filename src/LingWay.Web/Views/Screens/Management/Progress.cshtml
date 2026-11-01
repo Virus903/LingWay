@@ -1,0 +1,62 @@
+@* Разметка: functional.js: registry. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Progress.1">
+<option value="{{g_id_0}}" {{value_1}}>{{g_name_2}}</option>
+</script>
+
+@* Разметка: functional.js: registry. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Progress.2">
+<option value="{{m_id_0}}" {{value_1}}>{{m_title_2}}</option>
+</script>
+
+@* Разметка: functional.js: registry. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Progress.3">
+<option {{value_0}}>{{s_1}}</option>
+</script>
+
+@* Разметка: functional.js: registry. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Progress.4">
+<span class="status {{value_0}}">{{value_1}}</span>
+<p>{{value_2}}%</p>
+<small class="learning-muted">{{overdue}}</small>
+</script>
+
+@* Разметка: functional.js: registry. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Management.Progress.5">
+{{value_0}}
+<div class="filters">
+  <select
+    aria-label="Группа"
+    style="width: auto"
+    onchange="
+      ui.filterGroup = this.value;
+      render();
+    "
+  >
+    <option value="">Все группы</option>
+    {{value_1}}
+  </select>
+  <select
+    aria-label="Модуль"
+    style="width: auto"
+    onchange="
+      ui.filterModule = this.value;
+      render();
+    "
+  >
+    <option value="">Все модули</option>
+    {{value_2}}
+  </select>
+  <select
+    aria-label="Статус"
+    style="width: auto"
+    onchange="
+      ui.filterStatus = this.value;
+      render();
+    "
+  >
+    <option value="">Все статусы</option>
+    {{value_3}}
+  </select>
+</div>
+{{value_4}}
+</script>
