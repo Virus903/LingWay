@@ -1,0 +1,64 @@
+@* Разметка: functional.js: dashboard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Dashboard.1">
+{{value_0}}{{value_1}}
+<div class="split">
+  <section class="card highlight">
+    <span class="pill warn">Ваш следующий шаг</span>
+    <h2>{{value_2}}</h2>
+    <p>Изучите слова и завершите диалог с персонажем.</p>
+    {{value_3}}
+  </section>
+  <section class="card">
+    <h2>В поездку без сети</h2>
+    <p>
+      Сохраните курс и разговорник в браузер. Озвучка без сети зависит от установленных системных
+      голосов.
+    </p>
+    {{value_4}}
+    <p id="offline-state">{{value_5}}</p>
+  </section>
+</div>
+<section class="section" style="margin-top: 30px">
+  <h2>Назначения преподавателя</h2>
+  {{value_6}}
+</section>
+</script>
+
+@* Разметка: learning.js: dashboard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Dashboard.2">
+<section class="learning-section">
+  <h2>Назначения преподавателя</h2>
+  <div class="learning-table">{{value_0}}</div>
+</section>
+</script>
+
+@* Разметка: learning.js: dashboard. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Dashboard.3">
+{{value_0}}{{value_1}}
+<div class="learning-hero">
+  <article class="learning-card primary-card">
+    <span class="pill">Сегодня · {{value_2}} минут</span>
+    <h2 style="margin-top: 20px">{{value_3}}</h2>
+    <p role="status">{{progress_13}}</p>
+    <p role="status">{{pending_14}}</p>
+    <p>Один урок и повторение {{due_4}} слов и фраз.</p>
+    <div class="actions">{{value_5}}{{value_6}}</div>
+  </article>
+  <article class="learning-card">
+    <div class="learning-icon">{{value_7}}</div>
+    <h3>Возьмите английский с собой</h3>
+    <p>Уроки, разговорник и иллюстрации в одном пакете.</p>
+    <p class="learning-download">{{value_8}}</p>
+    <div class="actions">{{value_9}}</div>
+    <small class="learning-muted">{{value_10}}</small>
+  </article>
+</div>
+<div class="learning-banner">
+  <div>
+    <b>Экстренные ситуации</b>
+    <p>Помощь, аптека, врач и потеря документов — всегда доступны.</p>
+  </div>
+  {{value_11}}
+</div>
+{{value_12}}
+</script>
