@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "test:api": "node api.cjs",
+    "test:browser": "node browser.cjs",
+    "test:quality": "node learning-quality.cjs",
+    "test:offline": "node hardening.cjs",
+    "test:security": "node security.cjs",
+    "test:reminders": "node reminders.cjs",
+    "test:screens": "node screens.cjs",
+    "test:sessions": "node session-push.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}
