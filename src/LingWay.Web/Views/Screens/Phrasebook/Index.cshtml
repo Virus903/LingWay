@@ -1,0 +1,133 @@
+@* Разметка: functional.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.1">
+<option {{value_0}}>{{v_1}}</option>
+</script>
+
+@* Разметка: functional.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.2">
+<article class="card">
+  <span class="pill">{{p_category_0}}</span>
+  <h2 style="font-size: 1.5rem; margin-top: 18px">{{p_en_1}}</h2>
+  <p>{{p_ru_2}}</p>
+  <div class="actions">{{value_3}}{{value_4}}</div>
+</article>
+</script>
+
+@* Разметка: functional.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.3">
+{{value_0}}
+<div class="filters">
+  <input
+    class="input"
+    style="max-width: 380px"
+    id="search"
+    value="{{ui_search_1}}"
+    placeholder="Поиск фразы"
+    oninput="searchPhrases(this)"
+  />
+  <select
+    aria-label="Категория"
+    style="width: auto"
+    onchange="
+      ui.category = this.value;
+      render();
+    "
+  >
+    <option value="">Все ситуации</option>
+    {{value_2}}
+  </select>
+  {{value_3}}
+</div>
+<div class="grid">{{value_4}}</div>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.4">
+<option {{value_0}}>{{c_1}}</option>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.5">
+<button
+  class="tab {{value_0}}"
+  onclick="
+    ui.favoriteOnly = true;
+    learningState.recent = false;
+    render();
+  "
+>
+  Избранное
+</button>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.6">
+<div class="learning-ipa">/{{p_ipa_0}}/</div>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.7">
+<article class="learning-card">
+  <span class="pill">{{p_category_0}}</span>
+  <h3>{{p_en_1}}</h3>
+  {{value_2}}
+  <p>{{p_ru_3}}</p>
+  <div class="actions">{{value_4}}{{value_5}}</div>
+</article>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.8">
+<div class="learning-empty">Здесь пока нет фраз</div>
+</script>
+
+@* Разметка: learning.js: phrasebook. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Phrasebook.Index.9">
+<div class="learning-page">
+  {{value_0}}
+  <div class="learning-toolbar">
+    <input
+      class="input"
+      id="search"
+      aria-label="Поиск фразы"
+      placeholder="Поиск на русском или английском"
+      value="{{ui_search_1}}"
+      oninput="searchPhrases(this)"
+    />
+    <select
+      aria-label="Ситуация"
+      onchange="
+        ui.category = this.value;
+        render();
+      "
+    >
+      <option value="">Все ситуации</option>
+      {{value_2}}
+    </select>
+  </div>
+  <div class="tabs">
+    <button
+      class="tab {{value_3}}"
+      onclick="
+        ui.favoriteOnly = false;
+        learningState.recent = false;
+        render();
+      "
+    >
+      Все фразы
+    </button>
+    {{value_4}}
+    <button
+      class="tab {{value_5}}"
+      onclick="
+        ui.favoriteOnly = false;
+        learningState.recent = true;
+        render();
+      "
+    >
+      Недавние
+    </button>
+  </div>
+  <div class="learning-grid learning-section">{{value_6}}</div>
+</div>
+</script>
