@@ -1,0 +1,189 @@
+@* Разметка: functional.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.1">
+<div class="feedback {{value_0}}">
+  <h3>{{value_1}}</h3>
+  <p>Правильный ответ: {{training_feedback_expected_2}}</p>
+</div>
+</script>
+
+@* Разметка: functional.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.2">
+<label class="option-card">
+  <input type="radio" name="value" value="{{i_0}}" required />
+  {{v_1}}
+</label>
+</script>
+
+@* Разметка: functional.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.3">
+<button class="btn">Проверить</button>
+{{value_0}}
+</script>
+
+@* Разметка: functional.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.4">
+<p class="hint">{{value_0}}</p>
+</script>
+
+@* Разметка: functional.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.5">
+<section class="exercise">
+  {{value_0}}{{value_1}}
+  <div class="card" style="margin-top: 24px">
+    <span class="pill">{{value_2}}</span>
+    <h2 style="margin-top: 20px">{{s_prompt_3}}</h2>
+    {{value_4}}
+    <form
+      onsubmit="
+        event.preventDefault();
+        answerStep(this);
+      "
+    >
+      {{value_5}}
+      <div class="actions">{{value_6}}</div>
+    </form>
+    <p id="speech-status" class="muted"></p>
+    {{value_7}}
+  </div>
+</section>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.6">
+<p class="learning-ipa">/{{value_0}}/</p>
+<p>{{s_translation_1}}</p>
+{{value_2}}
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.7">
+<label class="option-card">
+  <input type="radio" name="value" value="{{i_0}}" required {{value_1}} />
+  {{v_2}}
+</label>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.8">
+<button class="word-token" type="button" onclick="removeToken({{i_0}})">{{value_1}}</button>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.9">
+<span class="learning-muted">Нажимайте на слова в нужном порядке</span>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.10">
+<button class="word-token" type="button" {{value_0}} onclick="addToken({{i_1}})">{{v_2}}</button>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.11">
+<p>{{value_0}}</p>
+<div class="token-answer" aria-label="Собранная фраза">{{value_1}}</div>
+<div class="token-bank">{{value_2}}</div>
+<input type="hidden" id="f-value" name="value" value="{{value_3}}" />
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.12">
+<button type="button" class="word-token" onclick="chooseAlternative({{i_0}})">{{v_1}}</button>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.13">
+<div class="token-bank">{{value_0}}</div>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.14">
+<div class="actions">{{value_0}}{{value_1}}</div>
+{{value_2}}
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.15">
+<p>{{x_s_prompt_0}}</p>
+<p>{{x_a_value_1}}</p>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.16">
+<details>
+  <summary>История разговора</summary>
+  <div class="learning-conversation">{{conversation_0}}</div>
+</details>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.17">
+<div class="actions">{{value_0}}{{value_1}}</div>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.18">
+<p class="learning-outcome">{{s_outcome_0}}</p>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.19">
+<div class="learning-feedback {{feedback_status_0}}" role="status">
+  <b>{{value_1}}</b>
+  <p>{{value_2}}</p>
+  <p>{{feedback_expected_3}}</p>
+  {{value_4}}
+</div>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.20">
+<div class="learning-section">
+  <p class="learning-sub">Сравните свою речь с образцом: звуки, ударение и ритм.</p>
+  {{value_0}}
+  <div id="practice-playback"></div>
+  {{value_1}}
+  <div id="pronunciation-result" aria-live="polite"></div>
+</div>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.21">
+<div class="learning-hint">
+  <small>Подсказка {{training_hintlevel_0}} из 3</small>
+  <p>{{value_1}}</p>
+  {{value_2}}
+</div>
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.22">
+<button class="btn">{{value_0}}</button>
+{{value_1}}
+</script>
+
+@* Разметка: learning.js: exerciseScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Exercise.23">
+<section class="learning-session">
+  {{value_0}}{{value_1}}
+  <article class="learning-card">
+    {{value_2}}
+    <span class="pill">{{value_3}}</span>
+    {{value_4}}
+    <div class="{{value_5}}"><h2 class="{{value_6}}">{{value_7}}</h2></div>
+    {{value_8}}
+    <form
+      onsubmit="
+        event.preventDefault();
+        answerStep(this);
+      "
+    >
+      {{value_9}}{{value_10}}
+      <p id="speech-status" class="learning-sub" role="status"></p>
+      {{value_11}}
+      <div class="actions">{{value_12}}</div>
+    </form>
+  </article>
+  <p class="learning-sub">{{value_13}}</p>
+</section>
+</script>

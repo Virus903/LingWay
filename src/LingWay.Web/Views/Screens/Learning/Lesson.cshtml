@@ -1,0 +1,61 @@
+@* Разметка: functional.js: lessonScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Lesson.1">
+<p>{{value_0}}. {{value_1}}</p>
+</script>
+
+@* Разметка: functional.js: lessonScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Lesson.2">
+{{value_0}}
+<div class="split">
+  <section class="card highlight">
+    <span class="pill">{{l_level_1}} · версия {{l_version_2}}</span>
+    <h2>Готовы попробовать?</h2>
+    <p>
+      {{l_steps_length_3}} задания. После ответа вы увидите пояснение, а в конце — итоговую оценку.
+    </p>
+    {{value_4}}
+  </section>
+  <section class="card">
+    <h2>План урока</h2>
+    {{value_5}}
+  </section>
+</div>
+</script>
+
+@* Разметка: learning.js: lessonScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Lesson.3">
+<p>
+  ✓ {{label_0}}
+  <span class="learning-muted">· {{value_1}}</span>
+</p>
+</script>
+
+@* Разметка: learning.js: lessonScreen. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Learning.Lesson.4">
+{{value_0}}
+<div class="learning-hero">
+  <article class="learning-card primary-card">
+    {{value_1}}
+    <div class="learning-meta">
+      <span>{{l_level_2}}</span>
+      <span>Ориентир: 10–15 минут</span>
+      <span>{{value_3}} шагов</span>
+    </div>
+    <h2>Готовы к разговору?</h2>
+    <p>
+      Изучите слова, потренируйте слух и пройдите один из двух маршрутов разговора. Ваш выбор меняет
+      дальнейшие реплики.
+    </p>
+    {{value_4}}
+  </article>
+  <article class="learning-card">
+    <h2>План урока</h2>
+    {{value_5}}
+    <p class="learning-sub">
+      Для прохождения: {{value_6}}% баллов. Верно — 1 балл, почти верно — 0.5.
+      Со второй попытки баллы за ответ уменьшаются вдвое; всего доступно три попытки.
+      Карточки слов не оцениваются. Подсказки лишают третьей звезды, но не запрещают пройти урок.
+    </p>
+  </article>
+</div>
+</script>
