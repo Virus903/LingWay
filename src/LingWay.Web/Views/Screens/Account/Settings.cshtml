@@ -1,0 +1,62 @@
+@* Разметка: account.js: accountSettings. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Settings.1">
+<div class="settings-grid">{{value_0}}{{value_1}}</div>
+<p class="account-hint">{{value_2}}</p>
+</script>
+
+@* Разметка: account.js: accountSettings. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Settings.2">
+<label class="account-toggle">
+  <span>
+    <b>{{value_0}}</b>
+    <small>{{value_1}}</small>
+  </span>
+  <input name="notifications" type="checkbox" {{value_2}} />
+</label>
+</script>
+
+@* Разметка: account.js: accountSettings. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Settings.3">
+<div class="account-action-row">
+  <p>{{value_0}}</p>
+  {{value_1}}
+</div>
+</script>
+
+@* Разметка: account.js: accountSettings. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Settings.4">
+<div class="account-page">
+  {{value_0}}
+  <form
+    class="account-stack"
+    onsubmit="
+      event.preventDefault();
+      saveAccountSettings(this);
+    "
+  >
+    {{value_1}}{{value_2}}{{value_3}}
+    <div class="account-save"><button class="btn">{{value_4}}</button></div>
+  </form>
+  <div class="account-stack">{{value_5}}</div>
+</div>
+</script>
+
+@* Разметка: learning.js: accountSettings. Значения передаёт одноимённая функция JavaScript. *@
+<script type="text/x-lingway-template" id="Account.Settings.5">
+<div class="learning-page">
+<section class="learning-card learning-section">
+<h2>Время напоминаний</h2>
+<form onsubmit="event.preventDefault();saveReminder(this)">
+<div class="learning-filters">{{value_0}}{{value_1}}{{value_2}}</div>
+<div class="actions">
+<button class="btn">Сохранить время</button>{{value_3}}</div>
+<p class="learning-sub">Напоминания появляются в колокольчике на сайте в указанное время, вне тихих часов. Разрешение браузера не требуется.</p>
+</form>
+</section>{{value_4}}<section class="learning-card learning-section">
+<h2>Проверка уведомлений</h2>
+<p class="learning-sub">Добавьте тестовое сообщение в колокольчик в правом верхнем углу. Оно сохранится и после обновления страницы.</p>{{value_5}}<p id="push-test-status" role="status">
+</p>
+</section>
+</div>
+</main>
+</script>
